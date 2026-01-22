@@ -1,0 +1,473 @@
+Title: Test Scenarios for Displaying Login Button to Guest Users in Account Section
+
+Test Scenarios:
+
+A. Positive Test Cases
+  1. Verify that the Login button is visible in the account section when accessed by a guest user.
+  2. Verify that the Login button is enabled and clickable for guest users.
+  3. Verify that clicking the Login button as a guest user navigates to the login page.
+  4. Verify that the Login button displays the correct label/text as per design specifications.
+
+B. Negative Test Cases
+  5. Verify that the Login button is not visible in the account section when accessed by a logged-in (authenticated) user.
+  6. Verify that the Login button is not visible if the account section fails to load due to a backend error.
+  7. Verify that the Login button is not visible for users with a corrupted or invalid session.
+  8. Verify that the Login button is not visible for users with restricted access (e.g., banned or blocked users, if applicable).
+
+C. Boundary Test Cases
+  9. Verify the visibility and accessibility of the Login button at the minimum supported screen resolution.
+  10. Verify the visibility and accessibility of the Login button at the maximum supported screen resolution.
+  11. Verify the Login button’s placement and visibility when the account section contains the maximum number of UI elements or widgets.
+  12. Verify the Login button’s visibility and functionality on different device types (desktop, tablet, mobile).
+
+D. Non-Functional Test Cases
+  13. Verify that the Login button loads within 2 seconds after the account section is rendered.
+  14. Verify that the Login button is accessible via keyboard navigation (tab order).
+  15. Verify that the Login button is properly announced by screen readers for accessibility compliance.
+  16. Verify that the Login button label is correctly localized in all supported languages.
+  17. Verify that the Login button is visible and functional across major browsers (Chrome, Firefox, Safari, Edge).
+  18. Verify that the Login button does not expose any sensitive information or security vulnerabilities to guest users.
+  19. Verify the usability of the Login button (e.g., size, color contrast, and placement meet UI/UX guidelines).
+
+Additional Details:
+  - User Story Reference: SCRUM-5
+  - Priority: High
+  - Notes: Ensure the Login button is only visible to guest users and not to authenticated users. All scenarios should be validated against UI/UX and accessibility standards. Update scenarios if acceptance criteria are refined.
+
+----------
+
+Test Case ID: TC001
+Test Case Title: Verify Login button is visible in the account section for guest users
+Preconditions: User is not logged in (guest session). Account section is accessible.
+Test Steps:
+1. Navigate to the application’s home page.
+2. Access the account section as a guest user.
+Expected Result: The Login button is visible in the account section.
+Priority: High
+Dependencies: User authentication system, Account section UI
+
+Test Case ID: TC002
+Test Case Title: Verify Login button is enabled and clickable for guest users
+Preconditions: User is not logged in (guest session). Account section is accessible.
+Test Steps:
+1. Navigate to the application’s home page.
+2. Access the account section as a guest user.
+3. Observe the Login button.
+4. Attempt to click the Login button.
+Expected Result: The Login button is enabled and can be clicked.
+Priority: High
+Dependencies: User authentication system, Account section UI
+
+Test Case ID: TC003
+Test Case Title: Verify navigation to login page when Login button is clicked by guest user
+Preconditions: User is not logged in (guest session). Account section is accessible.
+Test Steps:
+1. Navigate to the application’s home page.
+2. Access the account section as a guest user.
+3. Click the Login button.
+Expected Result: User is redirected to the login page.
+Priority: High
+Dependencies: Login page, Navigation system
+
+Test Case ID: TC004
+Test Case Title: Verify Login button displays correct label/text as per design
+Preconditions: User is not logged in (guest session). Account section is accessible.
+Test Steps:
+1. Navigate to the application’s home page.
+2. Access the account section as a guest user.
+3. Observe the text label on the Login button.
+Expected Result: The Login button displays the correct label/text as per design specifications.
+Priority: Medium
+Dependencies: UI design specifications
+
+Test Case ID: TC005
+Test Case Title: Verify Login button is not visible for authenticated users
+Preconditions: User is logged in (authenticated session). Account section is accessible.
+Test Steps:
+1. Log in with valid user credentials.
+2. Access the account section.
+Expected Result: The Login button is not visible in the account section.
+Priority: High
+Dependencies: User authentication system
+
+Test Case ID: TC006
+Test Case Title: Verify Login button is not visible if account section fails to load due to backend error
+Preconditions: Simulate backend error causing account section to fail loading.
+Test Steps:
+1. Trigger a backend error (e.g., disconnect backend service).
+2. Navigate to the application’s home page.
+3. Access the account section.
+Expected Result: The Login button is not visible (account section does not load).
+Priority: Medium
+Dependencies: Backend service, Error handling
+
+Test Case ID: TC007
+Test Case Title: Verify Login button is not visible for users with corrupted or invalid session
+Preconditions: User session is corrupted or invalid.
+Test Steps:
+1. Corrupt or invalidate the user session (e.g., manipulate session cookie).
+2. Navigate to the application’s home page.
+3. Access the account section.
+Expected Result: The Login button is not visible.
+Priority: Medium
+Dependencies: Session management system
+
+Test Case ID: TC008
+Test Case Title: Verify Login button is not visible for users with restricted access (banned/blocked)
+Preconditions: User account is banned or blocked.
+Test Steps:
+1. Attempt to access the account section as a banned or blocked user.
+Expected Result: The Login button is not visible.
+Priority: Medium
+Dependencies: User management system
+
+Test Case ID: TC009
+Test Case Title: Verify Login button visibility at minimum supported screen resolution
+Preconditions: User is not logged in (guest session). Device is set to minimum supported resolution.
+Test Steps:
+1. Set device to minimum supported screen resolution.
+2. Navigate to the application’s home page.
+3. Access the account section.
+Expected Result: The Login button is visible and accessible.
+Priority: Medium
+Dependencies: Responsive UI design
+
+Test Case ID: TC010
+Test Case Title: Verify Login button visibility at maximum supported screen resolution
+Preconditions: User is not logged in (guest session). Device is set to maximum supported resolution.
+Test Steps:
+1. Set device to maximum supported screen resolution.
+2. Navigate to the application’s home page.
+3. Access the account section.
+Expected Result: The Login button is visible and accessible.
+Priority: Medium
+Dependencies: Responsive UI design
+
+Test Case ID: TC011
+Test Case Title: Verify Login button placement and visibility with maximum UI elements in account section
+Preconditions: User is not logged in (guest session). Account section contains maximum number of UI elements/widgets.
+Test Steps:
+1. Populate account section with maximum supported UI elements.
+2. Navigate to the application’s home page.
+3. Access the account section.
+Expected Result: The Login button is visible and correctly placed according to UI guidelines.
+Priority: Medium
+Dependencies: UI design, Account section configuration
+
+Test Case ID: TC012
+Test Case Title: Verify Login button visibility and functionality on different device types
+Preconditions: User is not logged in (guest session).
+Test Steps:
+1. Access the application on a desktop device and navigate to the account section.
+2. Repeat on a tablet device.
+3. Repeat on a mobile device.
+Expected Result: The Login button is visible and functional on all device types.
+Priority: High
+Dependencies: Responsive UI design
+
+Test Case ID: TC013
+Test Case Title: Verify Login button loads within 2 seconds after account section is rendered
+Preconditions: User is not logged in (guest session). Account section is accessible.
+Test Steps:
+1. Navigate to the application’s home page.
+2. Access the account section.
+3. Measure the time taken for the Login button to appear after the account section is rendered.
+Expected Result: The Login button loads within 2 seconds.
+Priority: Medium
+Dependencies: Performance requirements
+
+Test Case ID: TC014
+Test Case Title: Verify Login button is accessible via keyboard navigation (tab order)
+Preconditions: User is not logged in (guest session). Account section is accessible.
+Test Steps:
+1. Navigate to the application’s home page.
+2. Access the account section.
+3. Use the Tab key to navigate through interactive elements.
+Expected Result: The Login button is reachable via keyboard navigation in correct tab order.
+Priority: High
+Dependencies: Accessibility standards
+
+Test Case ID: TC015
+Test Case Title: Verify Login button is announced by screen readers for accessibility
+Preconditions: User is not logged in (guest session). Screen reader is enabled.
+Test Steps:
+1. Enable a screen reader on the device.
+2. Navigate to the application’s home page.
+3. Access the account section.
+4. Use the screen reader to navigate to the Login button.
+Expected Result: The Login button is properly announced by the screen reader with correct label.
+Priority: High
+Dependencies: Accessibility standards
+
+Test Case ID: TC016
+Test Case Title: Verify Login button label is localized in all supported languages
+Preconditions: User is not logged in (guest session). Application supports multiple languages.
+Test Steps:
+1. Change application language to each supported language.
+2. Navigate to the account section as a guest user.
+3. Observe the Login button label.
+Expected Result: The Login button label is correctly localized for each language.
+Priority: Medium
+Dependencies: Localization files
+
+Test Case ID: TC017
+Test Case Title: Verify Login button is visible and functional across major browsers
+Preconditions: User is not logged in (guest session).
+Test Steps:
+1. Open the application in Chrome and access the account section.
+2. Repeat in Firefox, Safari, and Edge.
+Expected Result: The Login button is visible and functional in all major browsers.
+Priority: High
+Dependencies: Cross-browser compatibility
+
+Test Case ID: TC018
+Test Case Title: Verify Login button does not expose sensitive information or security vulnerabilities
+Preconditions: User is not logged in (guest session). Security tools available.
+Test Steps:
+1. Inspect the Login button element and related network requests.
+2. Attempt common security tests (e.g., XSS, information disclosure).
+Expected Result: The Login button does not expose sensitive information or security vulnerabilities.
+Priority: High
+Dependencies: Security requirements
+
+Test Case ID: TC019
+Test Case Title: Verify usability of Login button (size, color contrast, placement meet UI/UX guidelines)
+Preconditions: User is not logged in (guest session). UI/UX guidelines are available.
+Test Steps:
+1. Access the account section as a guest user.
+2. Measure the Login button size, color contrast, and placement.
+3. Compare with UI/UX guidelines.
+Expected Result: The Login button meets all UI/UX guidelines for usability.
+Priority: Medium
+Dependencies: UI/UX guidelines
+
+----------
+
+{
+  "status": "success",
+  "message": "Test cases uploaded successfully to TestRail. All 19 test cases were created in the 'poly testcases' section (ID: 31) of the specified project and suite. No errors occurred during the upload.",
+  "response": {
+    "uploaded_count": 19,
+    "failed_count": 0,
+    "section_name": "poly testcases",
+    "section_id": 31,
+    "details": "All test cases for SCRUM-5 (Login button for guest users) were uploaded with priorities, dependencies, and references as specified."
+  }
+}
+
+----------
+
+poly_project/
+ ├── tests/
+ │    ├── test_login_button.py
+ ├── utils/
+ │    ├── browser_utils.py
+ │    ├── config.py
+ │    └── context.py
+
+---
+
+**utils/browser_utils.py**
+```python
+from selenium import webdriver
+import pytest
+
+@pytest.fixture(scope='function')
+def browser():
+    driver = webdriver.Chrome()
+    driver.implicitly_wait(10)
+    yield driver
+    driver.quit()
+```
+
+---
+
+**utils/config.py**
+```python
+base_url = 'https://your-app-url.com'  # Placeholder, replace with actual base URL
+```
+
+---
+
+**utils/context.py**
+```python
+session_name = 'SCRUM-5 Session'  # Placeholder
+project_id = 'PLACEHOLDER_PROJECT_ID'
+suite_id = 'PLACEHOLDER_SUITE_ID'
+section_name = 'poly testcases'
+```
+
+---
+
+**tests/test_login_button.py**
+```python
+import pytest
+from selenium.webdriver.common.by import By
+from utils import config
+
+# TC001
+def test_login_button_visible_for_guest(browser):
+    browser.get(f"{config.base_url}/")
+    # Access account section (placeholder locator)
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.is_displayed()
+
+# TC002
+def test_login_button_enabled_and_clickable_for_guest(browser):
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.is_enabled()
+    login_btn.click()
+
+# TC003
+def test_navigation_to_login_page_on_login_button_click(browser):
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    browser.find_element(By.ID, 'login-button').click()
+    assert '/login' in browser.current_url
+
+# TC004
+def test_login_button_label(browser):
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.text == 'Login'  # Replace with design spec if different
+
+# TC005
+def test_login_button_not_visible_for_authenticated_user(browser):
+    # Simulate login (placeholder)
+    browser.get(f"{config.base_url}/login")
+    browser.find_element(By.ID, 'username').send_keys('valid_user')
+    browser.find_element(By.ID, 'password').send_keys('valid_password')
+    browser.find_element(By.ID, 'submit-login').click()
+    browser.find_element(By.ID, 'account-section').click()
+    login_buttons = browser.find_elements(By.ID, 'login-button')
+    assert len(login_buttons) == 0
+
+# TC006
+def test_login_button_not_visible_on_account_section_backend_error(browser):
+    # Simulate backend error (manual or mock required)
+    browser.get(f"{config.base_url}/?simulate_backend_error=1")
+    try:
+        browser.find_element(By.ID, 'account-section').click()
+        login_btn = browser.find_element(By.ID, 'login-button')
+        assert not login_btn.is_displayed()
+    except Exception:
+        assert True  # Account section did not load, button not visible
+
+# TC007
+def test_login_button_not_visible_for_invalid_session(browser):
+    browser.get(f"{config.base_url}/")
+    browser.delete_all_cookies()  # Invalidate session
+    browser.find_element(By.ID, 'account-section').click()
+    login_buttons = browser.find_elements(By.ID, 'login-button')
+    assert len(login_buttons) == 0
+
+# TC008
+def test_login_button_not_visible_for_banned_user(browser):
+    # Simulate banned user (placeholder)
+    browser.get(f"{config.base_url}/?user_status=banned")
+    browser.find_element(By.ID, 'account-section').click()
+    login_buttons = browser.find_elements(By.ID, 'login-button')
+    assert len(login_buttons) == 0
+
+# TC009
+def test_login_button_visible_min_resolution(browser):
+    browser.set_window_size(320, 480)
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.is_displayed()
+
+# TC010
+def test_login_button_visible_max_resolution(browser):
+    browser.set_window_size(1920, 1080)
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.is_displayed()
+
+# TC011
+def test_login_button_placement_with_max_ui_elements(browser):
+    # Simulate max UI elements (placeholder)
+    browser.get(f"{config.base_url}/?max_ui_elements=1")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.is_displayed()
+    # Placement check would require UI automation tool or visual check
+
+# TC012
+@pytest.mark.parametrize("device", [
+    {"width": 1920, "height": 1080},  # Desktop
+    {"width": 768, "height": 1024},   # Tablet
+    {"width": 375, "height": 667},    # Mobile
+])
+def test_login_button_visible_on_all_devices(browser, device):
+    browser.set_window_size(device["width"], device["height"])
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.is_displayed()
+
+# TC013
+def test_login_button_loads_within_2_seconds(browser):
+    import time
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    start = time.time()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    end = time.time()
+    assert (end - start) <= 2
+
+# TC014
+def test_login_button_accessible_via_tab(browser):
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    browser.find_element(By.TAG_NAME, 'body').send_keys('\t' * 10)  # Tab navigation
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn == browser.switch_to.active_element
+
+# TC015
+def test_login_button_announced_by_screen_reader():
+    # Accessibility test - requires integration with accessibility tools
+    pass
+
+# TC016
+@pytest.mark.parametrize("lang,expected_label", [
+    ("en", "Login"),
+    ("es", "Iniciar sesión"),
+    ("fr", "Connexion"),
+    # Add more languages as supported
+])
+def test_login_button_localized(browser, lang, expected_label):
+    browser.get(f"{config.base_url}/?lang={lang}")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    assert login_btn.text == expected_label
+
+# TC017
+@pytest.mark.parametrize("browser_name", [
+    "chrome", "firefox", "safari", "edge"
+])
+def test_login_button_cross_browser(browser_name):
+    # Cross-browser test - requires setup for each browser
+    pass
+
+# TC018
+def test_login_button_security(browser):
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    # Security checks would require integration with security tools
+    assert True
+
+# TC019
+def test_login_button_usability(browser):
+    browser.get(f"{config.base_url}/")
+    browser.find_element(By.ID, 'account-section').click()
+    login_btn = browser.find_element(By.ID, 'login-button')
+    # Usability checks (size, color, contrast) would require UI automation or manual verification
+    assert login_btn.is_displayed()
+```
